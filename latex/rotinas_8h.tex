@@ -1,0 +1,193 @@
+\hypertarget{rotinas_8h}{}\section{rotinas.\+h File Reference}
+\label{rotinas_8h}\index{rotinas.\+h@{rotinas.\+h}}
+
+
+Arquivo que contém as assinaturas das sub-\/rotinas.  
+
+
+{\ttfamily \#include \char`\"{}pixel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}moment.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rotinas_8h_af2cb8faf76d1906b62ad7a7ee8ccf1ed}{sky} (int line, int column, \hyperlink{structPIXEL}{P\+I\+X\+EL} malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]}, enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment} moment)
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina que pinta o céu. \end{DoxyCompactList}\item 
+void \hyperlink{rotinas_8h_abbe3c5f6533a75c72b71c4aa54f89535}{stars} (int line, int column, \hyperlink{structPIXEL}{P\+I\+X\+EL} malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]})
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina que pinta as estrelas. \end{DoxyCompactList}\item 
+void \hyperlink{rotinas_8h_a05f87274d2e25b93382b32eba5b886f8}{shape} (int begin, int end, int length, int range, float line\+\_\+shape\mbox{[}length\mbox{]})
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina que faz os cálculos para encontrar os valores de altitude. \end{DoxyCompactList}\item 
+void \hyperlink{rotinas_8h_aa728313fe67f7947dbd5580504219873}{mountain} (int length, \hyperlink{structPIXEL}{P\+I\+X\+EL} malha\mbox{[}length\mbox{]}\mbox{[}length\mbox{]}, float line\+\_\+shape\mbox{[}length\mbox{]}, enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment} moment, int $\ast$mountain\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina responsável por pintar a montanha. \end{DoxyCompactList}\item 
+enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment} \hyperlink{rotinas_8h_a4e6ad302ff87bed5a7a136c64218028e}{convert\+\_\+moment} (int moment\+\_\+input)
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina que define valores válidos para o procedimento -\/m. \end{DoxyCompactList}\item 
+void \hyperlink{rotinas_8h_a7538e00cabbc80fdc25805271b2695de}{verify\+\_\+range\+\_\+length} (int parameter\+\_\+d, int $\ast$range, int parameter\+\_\+l, int $\ast$length)
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina que decide os valores para os parâmetros -\/d e -\/l de acordo com os valores de entrada. \end{DoxyCompactList}\item 
+void \hyperlink{rotinas_8h_a8ad6ff46ce3b24ccdfa1afda98843b2d}{save} (int column, int line, \hyperlink{structPIXEL}{P\+I\+X\+EL} malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]}, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Sub-\/rotina responsável por escrever a matriz num arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo que contém as assinaturas das sub-\/rotinas. 
+
+\begin{DoxyAuthor}{Author}
+Franklin Matheus e Leonardo Santos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29/11/2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rotinas_8h_a4e6ad302ff87bed5a7a136c64218028e}\label{rotinas_8h_a4e6ad302ff87bed5a7a136c64218028e}} 
+\index{rotinas.\+h@{rotinas.\+h}!convert\+\_\+moment@{convert\+\_\+moment}}
+\index{convert\+\_\+moment@{convert\+\_\+moment}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{convert\+\_\+moment()}{convert\_moment()}}
+{\footnotesize\ttfamily enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment} convert\+\_\+moment (\begin{DoxyParamCaption}\item[{int}]{moment\+\_\+input }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina que define valores válidos para o procedimento -\/m. 
+
+Verifica se o valor para o parâmetro -\/m (responsável por definir o momento em que a imagem é gerada) inserido pelo usuário é válido (1$\sim$3), senão, encontra um equivalente
+
+
+\begin{DoxyParams}{Parameters}
+{\em moment\+\_\+input} & valor inserido pelo usuário na linha de código para o parâmetro -\/m \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_aa728313fe67f7947dbd5580504219873}\label{rotinas_8h_aa728313fe67f7947dbd5580504219873}} 
+\index{rotinas.\+h@{rotinas.\+h}!mountain@{mountain}}
+\index{mountain@{mountain}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{mountain()}{mountain()}}
+{\footnotesize\ttfamily void mountain (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{\hyperlink{structPIXEL}{P\+I\+X\+EL}}]{malha\mbox{[}length\mbox{]}\mbox{[}length\mbox{]},  }\item[{float}]{line\+\_\+shape\mbox{[}length\mbox{]},  }\item[{enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment}}]{moment,  }\item[{int $\ast$}]{mountain\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina responsável por pintar a montanha. 
+
+Preenche os as células da matriz cujos indices da linha forem menores que os respectivos
+
+valores no vetor de altitude 
+\begin{DoxyParams}{Parameters}
+{\em length} & tamanho da matriz que representa a imagem \\
+\hline
+{\em malha\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & matriz de registros do tipo \hyperlink{structPIXEL}{P\+I\+X\+EL}, onde cada célula representa uma cor no formato R\+GB \\
+\hline
+{\em line\+\_\+shape\mbox{[}$\,$\mbox{]}} & vetor que armazena as altitudes que a montanha alcança \\
+\hline
+{\em moment} & momento que a imagem será gerada, importante para definir a cor da montanha \\
+\hline
+{\em mountain\+\_\+number} & número da montanha que está sendo criada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_a8ad6ff46ce3b24ccdfa1afda98843b2d}\label{rotinas_8h_a8ad6ff46ce3b24ccdfa1afda98843b2d}} 
+\index{rotinas.\+h@{rotinas.\+h}!save@{save}}
+\index{save@{save}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{line,  }\item[{\hyperlink{structPIXEL}{P\+I\+X\+EL}}]{malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]},  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina responsável por escrever a matriz num arquivo. 
+
+De acordo com o nome do arquivo que foi definido arteriormente, ele é criado e recebe os valores da matriz e resulta na imagem
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & número de colunas da matriz \\
+\hline
+{\em line} & número de linhas da matriz \\
+\hline
+{\em malha\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & matriz de registros do tipo \hyperlink{structPIXEL}{P\+I\+X\+EL}, onde cada célula representa uma cor no formato R\+GB  nome do arquivo onde a matriz será escrita \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_a05f87274d2e25b93382b32eba5b886f8}\label{rotinas_8h_a05f87274d2e25b93382b32eba5b886f8}} 
+\index{rotinas.\+h@{rotinas.\+h}!shape@{shape}}
+\index{shape@{shape}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily void shape (\begin{DoxyParamCaption}\item[{int}]{begin,  }\item[{int}]{end,  }\item[{int}]{length,  }\item[{int}]{range,  }\item[{float}]{line\+\_\+shape\mbox{[}length\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina que faz os cálculos para encontrar os valores de altitude. 
+
+Calcula os valores de altitude da montanha que irão ser inseridos no vetor
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & indice do primeiro valor do intervalo que está sendo manipulado \\
+\hline
+{\em end} & indice do último valor do intervalo que está sendo manipulado \\
+\hline
+{\em length} & tamanho da matriz que representa a imagem \\
+\hline
+{\em range} & fator deslocamento \\
+\hline
+{\em line\+\_\+shape\mbox{[}$\,$\mbox{]}} & vetor que armazena as altitudes que a montanha alcança \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_af2cb8faf76d1906b62ad7a7ee8ccf1ed}\label{rotinas_8h_af2cb8faf76d1906b62ad7a7ee8ccf1ed}} 
+\index{rotinas.\+h@{rotinas.\+h}!sky@{sky}}
+\index{sky@{sky}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{sky()}{sky()}}
+{\footnotesize\ttfamily void sky (\begin{DoxyParamCaption}\item[{int}]{line,  }\item[{int}]{column,  }\item[{\hyperlink{structPIXEL}{P\+I\+X\+EL}}]{malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]},  }\item[{enum \hyperlink{moment_8h_a0c055c7424f0e6d0b74b9ba6221746ec}{Moment}}]{moment }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina que pinta o céu. 
+
+Pinta o céu da imagem de acordo com o momento desejado (manhã, tarde ou noite)
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & quantidade de linhas da matriz \\
+\hline
+{\em column} & quantidade de colunas da matriz \\
+\hline
+{\em malha\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & matriz de registros do tipo \hyperlink{structPIXEL}{P\+I\+X\+EL}, onde cada célula representa uma cor no formato R\+GB \\
+\hline
+{\em moment} & momento que a imagem será gerada, importante para definir a cor do céu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_abbe3c5f6533a75c72b71c4aa54f89535}\label{rotinas_8h_abbe3c5f6533a75c72b71c4aa54f89535}} 
+\index{rotinas.\+h@{rotinas.\+h}!stars@{stars}}
+\index{stars@{stars}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{stars()}{stars()}}
+{\footnotesize\ttfamily void stars (\begin{DoxyParamCaption}\item[{int}]{line,  }\item[{int}]{column,  }\item[{\hyperlink{structPIXEL}{P\+I\+X\+EL}}]{malha\mbox{[}line\mbox{]}\mbox{[}column\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina que pinta as estrelas. 
+
+Gera um número aleatório de estrelas em locais aleatórios da matriz
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & quantidade de linhas da matriz \\
+\hline
+{\em column} & quantidade de colunas da matriz \\
+\hline
+{\em malha\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & matriz de registros do tipo \hyperlink{structPIXEL}{P\+I\+X\+EL}, onde cada célula representa uma cor no formato R\+GB \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rotinas_8h_a7538e00cabbc80fdc25805271b2695de}\label{rotinas_8h_a7538e00cabbc80fdc25805271b2695de}} 
+\index{rotinas.\+h@{rotinas.\+h}!verify\+\_\+range\+\_\+length@{verify\+\_\+range\+\_\+length}}
+\index{verify\+\_\+range\+\_\+length@{verify\+\_\+range\+\_\+length}!rotinas.\+h@{rotinas.\+h}}
+\subsubsection{\texorpdfstring{verify\+\_\+range\+\_\+length()}{verify\_range\_length()}}
+{\footnotesize\ttfamily void verify\+\_\+range\+\_\+length (\begin{DoxyParamCaption}\item[{int}]{parameter\+\_\+d,  }\item[{int $\ast$}]{range,  }\item[{int}]{parameter\+\_\+l,  }\item[{int $\ast$}]{length }\end{DoxyParamCaption})}
+
+
+
+Sub-\/rotina que decide os valores para os parâmetros -\/d e -\/l de acordo com os valores de entrada. 
+
+Verifica se valores foram que inseridos para os parâmetros -\/d e -\/l, caso não, são definidos valores default. Se apenas um dos dois valores foi informado, o programa encontra um valor favorável para o outro
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter\+\_\+d} & variável que diz se algum valor foi inserido para o parâmetro -\/d \\
+\hline
+{\em range} & fator deslocamento  variável que diz se algum valor foi inserido para o parâmetro -\/l \\
+\hline
+{\em length} & tamanho da matriz que representa a imagem \\
+\hline
+\end{DoxyParams}
