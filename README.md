@@ -86,6 +86,7 @@ _Foi pensado em implementar o projeto usando a raylib, onde a intenção era ger
 
 
 ### Autores
-        Franklin Matheus 
-        Leonardo Santos
+        Franklin Matheus;
+        Leonardo Santos;
+        Univerdade Federal do Rio Grande do Norte (UFRN), Natal - RN. 
 
