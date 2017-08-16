@@ -11,24 +11,24 @@ $ gcc main.c rotinas.c
 ### Parâmetros de configuração em linha de código
 
 `-d <num>` (fator deslocamento)
----
+
 `-o <file>` (nome do arquivo que será gerado)
----
+
 `-l <num>` (tamanho da matriz)
----
+
 `-m <num>` (momento do dia que a imagem é gerada)
 
 
 ### Exemplos de uso
 
 `$ ./a.out`
----
+
 `$ ./a.out -d 50`
----
+
 `$ ./a.out -o image.ppm`
----
+
 `$ ./a.out -l 513 -m 1`
----
+
 `$ ./a.out -o image.ppm -l 513`
 
 
@@ -39,7 +39,6 @@ $ gcc main.c rotinas.c
 * `-l`: 513
 * `-m`: (random 1~3)
 
----
 
 Caso queira que o programa gere um valor default para algum parâmetro, 
 não o acrescente na linha de comando, exemplo:
